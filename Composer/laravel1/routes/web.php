@@ -11,6 +11,8 @@
 |
 */
 
+// CLASE 1 - 03/10/2018
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -53,3 +55,14 @@ Route::get('/resultado/{numero}/resultado2/{numero2?}', function($numero, $numer
     }
     return $numero %2 ? "es par" : "es impar";
 });
+
+
+//CLASE 2 - 05/10/2018
+
+Route::get('/peliculas/{id}', 'PeliculasController@buscarPeliculasId');
+
+Route::get('/peliculas/buscar/{nombre}', 'PeliculasController@buscarPeliculasNombre');
+
+Route::get('/peliculas/buscar/for/{nombre}', 'PeliculasController@buscarPeliculasNombreFor');
+
+Route::get('/peliculas', 'PeliculasController@index');
