@@ -27,6 +27,11 @@ class ActorController extends Controller
     //CLASE 4 Ej 4)a de la clase 3
     public function search(Request $request)
     {
+        $this->validate($request, [
+            'search' => 'required'
+        ], [
+            'search.requiered' => 'El campo no puede estar vacío'
+        ]);
         //dd($request);
 
         //Ej 4)c de la clase 3

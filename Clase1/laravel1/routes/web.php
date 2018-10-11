@@ -81,3 +81,9 @@ Route::get('/actores', 'ActorController@directory')->name('actor.index');
 Route::get('/actor/buscar', 'ActorController@search')->name('actor.search');
 
 Route::get('/actor/{id}', 'ActorController@show')->name('actor.show')->where('id', '[0-9]+');
+
+//Ej 1) de la clase 4
+
+Route::get('/movies/create', 'MoviesController@create')->name('movies.create');
+
+Route::post('/movies/create', 'MoviesController@store')->name('movies.store');

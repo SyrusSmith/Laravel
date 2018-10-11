@@ -4,6 +4,7 @@
     </head>
     <body>
         <form id="agregarPelicula" name="agregarPelicula" method="POST">
+            @csrf
             <div>
                 <label for="titulo">Titulo</label>
                 <input type="text" name="titulo" id="titulo"/>
